@@ -37,7 +37,9 @@ h1, h2, h3 { font-family: "Playfair Display", serif; color: var(--goya-deep); }
 .space-photos.one { grid-template-columns: minmax(0, 1fr); }
 .space-photos figure { border-radius: 14px; margin: 0; overflow: hidden; position: relative; }
 .space-photos img { display: block; height: 275px; object-fit: cover; width: 100%; }
+.space-photos.entrada img { background: var(--goya-cream); object-fit: contain; }
 .space-photos figcaption { background: linear-gradient(transparent, rgba(14,52,69,.86)); bottom: 0; color: white; font-size: .94rem; font-weight: 700; left: 0; padding: 2.5rem 1rem .9rem; position: absolute; right: 0; }
+.space-photos.entrada figure { background: var(--goya-cream); }
 .photo-grid { display: grid; flex: 1; gap: 1rem; grid-auto-rows: 220px; grid-template-columns: repeat(4, 1fr); }
 .photo-card { border-radius: 16px; margin: 0; overflow: hidden; position: relative; }
 .photo-card img { height: 100%; object-fit: cover; transition: transform .35s ease; width: 100%; }
@@ -47,6 +49,34 @@ h1, h2, h3 { font-family: "Playfair Display", serif; color: var(--goya-deep); }
 .photo-kitchen { grid-column: span 2; }
 .photo-lounge { grid-column: span 2; }
 .rooms-gallery { min-width: 0; }
+.room-stories { display: grid; flex: 1; gap: .8rem; grid-template-columns: repeat(2, minmax(0, 1fr)); min-width: 0; }
+.room-card { background: #fff; border: 1px solid #e7dfca; border-radius: 12px; overflow: hidden; }
+.room-card summary { align-items: center; cursor: pointer; display: flex; gap: .85rem; list-style: none; }
+.room-card summary::-webkit-details-marker { display: none; }
+.room-card summary img { height: 105px; object-fit: cover; width: 105px; }
+.room-card summary span { display: grid; gap: .2rem; padding-right: .65rem; }
+.room-card strong { color: var(--goya-deep); font-family: "Playfair Display", serif; font-size: 1.25rem; }
+.room-card small { color: #806a36; font-weight: 700; }
+.room-card p { border-top: 1px solid #eee7d8; line-height: 1.55; margin: 0; padding: 1rem; }
+.gallery-all { border-top: 1px solid #e8e2d2; margin-top: 2rem; padding-top: 2rem; }
+.gallery-all > summary { color: var(--goya-deep); cursor: pointer; font-family: "Playfair Display", serif; font-size: 1.55rem; font-weight: 700; list-style: none; }
+.gallery-all > summary::-webkit-details-marker { display: none; }
+.gallery-all > summary i { font-family: sans-serif; font-size: 1rem; margin-left: .5rem; }
+.space-gallery { border-top: 1px solid #e8e2d2; margin: -1.2rem 0 2rem; padding: 1.5rem 0 2.5rem; }
+.space-gallery > summary { background: var(--goya-deep); border-radius: 10px; color: white; cursor: pointer; display: inline-block; font-weight: 700; list-style: none; padding: .75rem 1rem; }
+.space-gallery > summary::-webkit-details-marker { display: none; }
+.space-gallery > .thumb-grid { margin-top: 1.3rem; }
+.category-gallery { flex: 1; min-width: 0; }
+.category-gallery > summary { align-items: center; background: var(--goya-deep); border-radius: 16px; box-shadow: 0 12px 24px rgba(14,52,69,.14); color: white; cursor: pointer; display: flex; font-family: "Playfair Display", serif; font-size: clamp(1.35rem, 2.2vw, 2rem); font-weight: 700; gap: .85rem; justify-content: center; list-style: none; min-height: 190px; padding: 2rem; text-align: center; }
+.category-gallery > summary::-webkit-details-marker { display: none; }
+.category-gallery > summary i { font-family: sans-serif; font-size: 1rem; }
+.category-emoji { font-family: sans-serif; font-size: 3rem; line-height: 1; }
+.category-gallery > .thumb-grid { margin-top: 1.25rem; }
+.complete-gallery { display: grid; gap: 2.2rem; margin-top: 2rem; }
+.complete-gallery h3 { font-size: 1.45rem; margin-bottom: .9rem; }
+.thumb-grid { display: grid; gap: .75rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.thumb-grid.rooms { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.thumb-grid img { aspect-ratio: 1 / .84; border-radius: 10px; object-fit: cover; width: 100%; }
 .virtual-tour { background: #0e3445; border: 8px solid white; border-radius: 20px; box-shadow: 0 16px 35px rgba(14,52,69,.16); display: block; margin: 0 auto; max-height: 620px; max-width: 100%; }
 .contact-link { color: var(--goya-deep); font-weight: 700; text-decoration: none; }
 .location-panel { background: white; border-radius: 18px; box-shadow: 0 16px 35px rgba(14,52,69,.1); }
@@ -57,5 +87,5 @@ h1, h2, h3 { font-family: "Playfair Display", serif; color: var(--goya-deep); }
 .contact-text { font-size: 1.15rem; max-width: 650px; }
 .footer { background: var(--goya-deep); color: #d6e0e3; padding: 2rem 0; }
 .footer a { color: #ead7a4; margin-left: 1.25rem; text-decoration: none; }
-@media (max-width: 991px) { .navbar { position: static; } .hero { min-height: 650px; padding-top: 4rem; } .section { padding: 72px 0; } .location-copy { padding: 2.25rem; } .space-block, .space-block.reverse { align-items: flex-start; flex-direction: column; gap: 1.5rem; } .space-copy { max-width: 680px; } .space-photos, .photo-grid { width: 100%; } .photo-grid { grid-auto-rows: 210px; grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 575px) { .space-photos { grid-template-columns: 1fr; } .space-photos img { height: 250px; } .photo-grid { display: block; } .photo-card { height: 260px; margin-bottom: 1rem; } }
+@media (max-width: 991px) { .navbar { position: static; } .hero { min-height: 650px; padding-top: 4rem; } .section { padding: 72px 0; } .location-copy { padding: 2.25rem; } .space-block, .space-block.reverse { align-items: flex-start; flex-direction: column; gap: 1.5rem; } .space-copy { max-width: 680px; } .space-photos, .photo-grid, .room-stories { width: 100%; } .photo-grid { grid-auto-rows: 210px; grid-template-columns: repeat(2, 1fr); } .thumb-grid.rooms { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 575px) { .space-photos { grid-template-columns: 1fr; } .space-photos img { height: 250px; } .photo-grid { display: block; } .photo-card { height: 260px; margin-bottom: 1rem; } .room-stories, .thumb-grid, .thumb-grid.rooms { grid-template-columns: repeat(2, minmax(0, 1fr)); } .room-card summary { display: block; } .room-card summary img { height: 150px; width: 100%; } .room-card summary span { padding: .75rem; } }

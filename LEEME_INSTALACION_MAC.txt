@@ -1,0 +1,33 @@
+RESIDENCIAL GOYA — VERSIÓN ACTUAL PARA MAC Y VSCODE
+
+Esta carpeta tiene la misma versión visual que la web publicada. La estructura
+es directa y está lista para abrirse en VSCode:
+
+Residencia_Web/
+  index.html
+  assets/
+  css/
+
+INSTALACIÓN SEGURA
+
+1. Cierra Safari y VSCode.
+2. En el Escritorio, renombra tu carpeta actual "Residencia_Web" como
+   "Residencia_Web_anterior". No la borres: será tu copia de seguridad.
+3. Descomprime este ZIP en Descargas.
+4. Mueve la carpeta descomprimida "Residencia_Web" al Escritorio.
+5. Desde "Residencia_Web_anterior/assets", copia la carpeta "video" y pégala
+   dentro de "Residencia_Web/assets". El vídeo no se incluye en este ZIP para
+   no duplicarlo.
+6. Abre la nueva carpeta "Residencia_Web" con VSCode.
+7. Para verla, haz doble clic en index.html o usa Live Server en VSCode.
+
+La ruta correcta en Safari debe ser:
+file:///Users/enrique/Desktop/Residencia_Web/index.html
+
+Solo debe aparecer una vez "Residencia_Web" en esa ruta.
+
+Esta versión contiene dos botones desplegables:
+- Cocina abierta, salón y comedor.
+- Baños.
+
+Las fotos de entrada y hall se muestran sin texto superpuesto.
